@@ -11,7 +11,6 @@ module.exports = Em.Component.extend({
     
     error: Em.computed.oneWay('record.error'),
 
-    containerSelector: null,
     _getCt: function() {
         return this.$().closest(config.containerSelector);
     },
