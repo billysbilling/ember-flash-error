@@ -11,6 +11,12 @@
     "test",
     "tests"
   ],
+  "billy-builder": {
+    "include": [
+      "src/js",
+      "src/templates"
+    ]
+  },
   "dependencies": {
     "ember": "billysbilling/bower-ember#~1.3.0",
     "style-guide": "billysbilling/style-guide#>=1.0 <2.0"
