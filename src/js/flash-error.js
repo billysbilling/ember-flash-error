@@ -1,9 +1,9 @@
-var config = require('./config');
-
 module.exports = Em.Component.extend({
     template: require('../templates/flash-error'),
 
     classNames: ['flash-error'],
+
+    containerSelector: 'body',
     
     classNameBindings: ['error:has-error'],
     
@@ -12,7 +12,7 @@ module.exports = Em.Component.extend({
     error: Em.computed.oneWay('record.error'),
 
     _getCt: function() {
-        return this.$().closest(config.containerSelector);
+        return this.$().closest(this.get('containerSelector'));
     },
 
     _setup: function() {
