@@ -4,11 +4,11 @@ module.exports = Em.Component.extend({
     classNames: ['flash-error'],
 
     containerSelector: 'body',
-    
+
     classNameBindings: ['error:has-error'],
-    
+
     record: null,
-    
+
     error: Em.computed.oneWay('record.error'),
 
     _getCt: function() {
@@ -29,9 +29,10 @@ module.exports = Em.Component.extend({
 
     _teardown: function() {
         var ct = this._getCt();
+        ct.css('padding-top', this._originalCtPadding + 'px');
         ct.removeClass('flash-error-ct');
     }.on('willDestroyElement'),
-    
+
     _errorDidChange: function() {
         Em.run.scheduleOnce('afterRender', this, this._adjustCtPadding);
         Em.run.scheduleOnce('afterRender', this, this._scrollIntoView);
