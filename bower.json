@@ -1,6 +1,6 @@
 {
   "name": "ember-flash-error",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "homepage": "https://github.com/billysbilling/ember-flash-error",
   "main": "src/js/flash-error.js",
   "license": "MIT",
