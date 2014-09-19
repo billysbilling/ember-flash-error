@@ -1,5 +1,5 @@
 module.exports = Em.Component.extend({
-    template: require('../templates/flash-error'),
+    layout: require('../templates/flash-error'),
 
     classNames: ['flash-error'],
 
